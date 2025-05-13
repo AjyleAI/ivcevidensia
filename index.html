@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prototype AI Assistant – IVC Evidensia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #000;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h1, h3 {
+      color: #499c54;
+      text-align: center;
+    }
+    hr {
+      border: none;
+      border-top: 2px dotted #499c54;
+      margin: 2rem 0;
+    }
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+    em {
+      display: block;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+    a {
+      color: #499c54;
+      text-decoration: none;
+    }
+    .spacer {
+      height: 100px;
+    }
+    .center-img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐾 Prototype AI Assistant for IVC Evidensia</h1>
+
+  <p><strong>A smarter, simpler way to serve clients — 24/7, across every location.</strong><br>
+  This working demo shows how a custom-trained chatbot could operate directly on your website, offering instant support, reducing admin pressure, and enhancing client experience across your network.</p>
+
+  <hr />
+
+  <h3>💬 What This Demo Shows</h3>
+  <ul>
+    <li><strong>Trained on IVC Evidensia’s website</strong> — answers real client questions instantly</li>
+    <li><strong>Simulates how the chatbot would appear live</strong> — bottom-right corner pop-up, fully branded</li>
+    <li><strong>Hosted on a secure test server</strong> — production versions are embedded seamlessly into your actual site</li>
+  </ul>
+
+  <hr />
+
+  <h3>🧪 How to Try It</h3>
+  <ol>
+    <li>Click the pink chat icon (bottom-right corner of this page) to open the demo bot.</li>
+    <li><strong>Type a question</strong> a website visitor might ask, such as:<br>
+      <em>“Where is your nearest clinic?”<br>“What vacancies are available?”</em>
+    </li>
+    <li><strong>Continue the conversation</strong> by asking follow-up questions — just as a real visitor would.</li>
+  </ol>
+
+  <em>📝 Please note: this demo uses a small subset of the website’s content. The final version will include as much information as you wish — including your full site, forms, custom logic, and more.</em>
+
+  <hr />
+
+  <h3>⚡ Why This Matters for Multi-Practice Groups</h3>
+  <ul>
+    <li><strong>Serve clients anytime</strong> — even out of hours</li>
+    <li><strong>Free up your front desk</strong> — fewer repetitive queries</li>
+    <li><strong>Increase lead conversion</strong> — guide new enquiries to the right place</li>
+    <li><strong>Keep messaging consistent</strong> — group-wide clarity with local customisation</li>
+    <li><strong>No dev work needed</strong> — we handle setup, training, and updates</li>
+  </ul>
+
+  <hr />
+
+  <img class="center-img" src="https://agilecatalyst.com/wp-content/uploads/2025/05/2.png" alt="IVC Evidensia Demo Preview"/>
+
+  <h3>🔐 Notes</h3>
+  <ul>
+    <li>This is a <strong>demo version</strong> hosted on a secure test environment.</li>
+    <li>Live deployments are embedded directly within your website and branded to your practice.</li>
+    <li>Full GDPR compliance included as standard.</li>
+  </ul>
+
+  <hr />
+
+  <h3>🧠 Want to explore how this could work across your full estate?</h3>
+  <p>Let’s schedule a quick walkthrough: 📅 <a href="https://scheduler.zoom.us/ajyleai/live-demo-strategy-session" target="_blank"><strong>Book Your Live Demo & Strategy Session</strong></a></p>
+
+  <div class="spacer"></div>
+
+  <!-- Chatbase script -->
+  <script>
+    (function(){
+      if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...args) => {
+          if(!window.chatbase.q) window.chatbase.q = [];
+          window.chatbase.q.push(args);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if(prop === "q") return target.q;
+            return (...args) => target(prop, ...args);
+          }
+        });
+      }
+      const onLoad = function() {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "-gUdkMTx1H3VXPoeVch3w";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if(document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+
+</body>
+</html>
